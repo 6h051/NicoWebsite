@@ -1,23 +1,15 @@
-var a = 0;
-function ver_contactos() {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
-      document.getElementById("contactos").innerHTML =
-      this.responseText;
-    }
-    xhttp.open("GET", "contact.html");
-    xhttp.send();
+function contactos() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("contacto").innerHTML =
+    this.responseText;
   }
-
-
-//JQuery
+  xhttp.open("GET", "contacto.html");
+  xhttp.send();
+}
 
 $(document).ready(function(){
-    $("#esconder").click(function(){
-        $("h4").fadeToggle();
-        document.getElementById("esconder").innerHTML= "<h1>Mostrar</h1>"
-        
-    });
+  $("button").click(function(){
+    $(this).hide();
   });
-
-  $(this).css('background-color', 'red');
+});
